@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --Orange-500: hsl(25, 97%, 53%);
+    --White: hsl(0, 100%, 100%);
+    --Grey-500: hsl(217, 12%, 63%);
+    --Grey-700: hsl(215, 18%, 19%);
+    --Grey-900: hsl(215, 20%, 16%);
+    --Grey-950: hsl(216, 12%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Overpass", sans-serif;
+    font-size: 15px;
+    background-color: var(--Grey-950);
+}
+
+.container{
+    max-width: 1440px;
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.card__rates__container,
+.card__results__container{
+    width: 320px;
+    height: 320px;
+    background-color: var(--Grey-900);
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hide{
+    display: none;
+}
+
+.card__stars__container{
+    width: 100%;
+    height: 30px;
+    display: flex;
+}
+
+.card__star,
+.card__rates__button{
+    width: 40px;
+    height: 40px;
+    background-color: var(--Grey-700);
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    border: none;
+    color: var(--Grey-500);
+}
+
+.card__rates__button:hover{
+    background-color: var(--Orange-500);
+    color: var(--Grey-950);
+}
+
+.active{
+    background-color: var(--White);
+    color: var(--Grey-950);
+}
+
+.card__star img{
+    width: 14px;
+}
+
+.card__text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.card__title{
+    font-size: 1.3rem;
+    color: var(--White);
+}
+
+.card__description{
+    font-size: 0.7rem;
+    color: var(--Grey-500);
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.card__rates{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__button__submit{
+    width: 100%;
+    height: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--Orange-500);
+    color: var(--Grey-950);
+}
+
+.card__button__submit:hover{
+    background-color: var(--White);
+}
+
+.card__results__container{
+    text-align: center;
+}
+
+.result__text{
+    width: 65%;
+    margin:  0 auto;
+    height: 30px;
+    background-color: var(--Grey-700);
+    color: var(--Orange-500);
+    font-size: 0.8rem;
+    border-radius: 10px;
+    padding-top: 5px;
+}
+
+.results__thankyou{
+    color: var(--White);
+}
+
+.results__description{
+    font-size: 0.8rem;
+    color: var(--Grey-500);
+    line-height: 20px;
+}
+
+@media(max-width: 375px){
+    .card__rates__container,
+    .card__results__container{
+        width: 300px;
+    }
+}

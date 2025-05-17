@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+<body>
+ <div class="container">
+    <article id="card-rates-container" class="card__rates__container">
+      <div id="card-star-container" class="card__stars__container">
+        <div class="card__star">
+          <img src="./images/icon-star.svg" alt="star">
+        </div>
+      </div>
+      <div class="card__text">
+        <h1 class="card__title">
+          How did we do?
+        </h1>
+        <p class="card__description">
+          Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!
+        </p>
+      </div>
+      <div id="card-rates" class="card__rates">
+        <button value="1" class="card__rates__button">1</button>
+        <button value="2" class="card__rates__button">2</button>
+        <button value="3" class="card__rates__button">3</button>
+        <button value="4" class="card__rates__button">4</button>
+        <button value="5" class="card__rates__button">5</button>
+      </div>
+      <button id="button-submit" class="card__button__submit">Submit</button>
+    </article>
+    <article id="card-results-container" class="card__results__container hide">
+      <div class="results__image">
+        <img src="./images/illustration-thank-you.svg" alt="Thank you ilustration">
+      </div>
+      <p class="result__text">You selected <span id="rating"></span> out of 5</p>
+      <h2 class="results__thankyou">Thank you!</h2>
+      <p class="results__description">We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!</p>
+    </article>
+ </div>  
+<script src="app.js"></script>
+</body>
+</html>
