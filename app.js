@@ -11,8 +11,28 @@ cardRates.addEventListener('click', (event)=>{
     });
     event.target.closest('button').classList.toggle('active');
     buttonSubmit.removeAttribute('disabled');
-    buttonSubmit.classList.remove('disabled')
+    buttonSubmit.classList.remove('disabled');
     updatestars(event.target.value);
+});
+
+cardRates.addEventListener('focusin', (event) =>{
+    const button = event.target.closest('button');
+    if (!button) return;
+    Array.from(cardRates.children).forEach(element => element.classList.remove('active'));
+    button.classList.add('active');
+    buttonSubmit.removeAttribute('disabled');
+    buttonSubmit.classList.remove('disabled');
+    updatestars(button.value);
+});
+
+cardRates.addEventListener('keydown', (event) =>{
+   if(event.key === 'Enter'){
+        let button = Array.from(cardRates.children).find(element =>
+            element.classList.contains('active')
+        );
+        if (!button) return;
+        showThankYou(button.value);   
+    }
 });
 
 function updatestars(totalStars){
@@ -29,10 +49,11 @@ function updatestars(totalStars){
 }
 
 buttonSubmit.addEventListener('click',() =>{
+    console.log(buttonSubmit)
     let button = Array.from(cardRates.children).find(element => {
        return element.classList.contains('active');
     });
-    
+    if (!button) return;
     showThankYou(button.value);    
 });
 
