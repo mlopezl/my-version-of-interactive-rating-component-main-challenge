@@ -10,6 +10,8 @@ cardRates.addEventListener('click', (event)=>{
         element.classList.remove('active');
     });
     event.target.closest('button').classList.toggle('active');
+    buttonSubmit.removeAttribute('disabled');
+    buttonSubmit.classList.remove('disabled')
     updatestars(event.target.value);
 });
 
@@ -30,13 +32,8 @@ buttonSubmit.addEventListener('click',() =>{
     let button = Array.from(cardRates.children).find(element => {
        return element.classList.contains('active');
     });
-
-    if(button){
-        showThankYou(button.value);
-    } else{
-        alert('Please select one option');
-    }
     
+    showThankYou(button.value);    
 });
 
 function showThankYou(result){

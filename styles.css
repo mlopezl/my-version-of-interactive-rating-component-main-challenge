@@ -121,8 +121,14 @@ body{
     cursor: pointer;
 }
 
+.disabled{
+    background-color: var(--Grey-700);
+    color: var(--Grey-500);
+}
+
 .card__button__submit:hover{
     background-color: var(--White);
+    color: var(--Grey-950);
 }
 
 .card__results__container{
