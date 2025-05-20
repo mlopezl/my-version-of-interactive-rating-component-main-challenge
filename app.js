@@ -9,7 +9,7 @@ cardRates.addEventListener('click', (event)=>{
     Array.from(cardRates.children).forEach(element => {
         element.classList.remove('active');
     });
-    event.target.classList.toggle('active');
+    event.target.closest('button').classList.toggle('active');
     updatestars(event.target.value);
 });
 
