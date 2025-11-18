@@ -161,5 +161,6 @@ body{
     .card__rates__container,
     .card__results__container{
         width: 300px;
+        margin-left: 0;
     }
 }
